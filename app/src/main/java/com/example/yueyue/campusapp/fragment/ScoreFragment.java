@@ -16,14 +16,15 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.clj.memoryspinner.MemorySpinner;
-import com.example.yueyue.campusapp.models.Score;
 import com.example.yueyue.campusapp.R;
 import com.example.yueyue.campusapp.adapter.ScoreAdapter;
 import com.example.yueyue.campusapp.db.Db;
 import com.example.yueyue.campusapp.implement.DataCallback;
+import com.example.yueyue.campusapp.models.Score;
 import com.example.yueyue.campusapp.utils.DateUtil;
 import com.example.yueyue.campusapp.utils.HandleResponseUtil;
 import com.example.yueyue.campusapp.utils.HttpUtil;
@@ -50,6 +51,7 @@ public class ScoreFragment extends Fragment implements View.OnClickListener {
     private ArrayList<String> spinnerList = new ArrayList<>();
     private RecyclerView rl_list;
     private TextView tv_semester_point;
+    private ImageView iv_back_ground;
     private Button import_btn;
     private ViewGroup showLayout;//数据库有数据,并且score有数据的时候显示
     private ViewGroup emptyLayout;//数据库没有数据时候的显示
@@ -80,6 +82,7 @@ public class ScoreFragment extends Fragment implements View.OnClickListener {
     private void initView(View view) {
         //下拉刷新
         refreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.sfl_layout);
+        iv_back_ground = (ImageView) view.findViewById(R.id.iv_back_ground);
 
         //数据库没有数据时候的显示
         emptyLayout = (ViewGroup) view.findViewById(R.id.item_score_empty);
@@ -116,12 +119,9 @@ public class ScoreFragment extends Fragment implements View.OnClickListener {
             spinnerList.add(0, "20" + year + "秋季");
         }
 
-        //  System.out.println(spinnerList.toString());
-//        ArrayList<String> list = new ArrayList<>(Arrays.asList("C_1", "C_2", "C_3", "C_4",
-//           "C_5","C_6", "C_7", "C_8", "C_9", "C_10", "C_11", "C_12", "C_13", "C_14"));
-
         memorySpinner.setMemoryCount(0);
         memorySpinner.setData(null, spinnerList);
+
 
 
         setHasOptionsMenu(true);
@@ -132,6 +132,9 @@ public class ScoreFragment extends Fragment implements View.OnClickListener {
      * 为相关组件注册监听
      */
     private void initListener() {
+
+//        Glide.with(getActivity()).load(HttpUtil.bing_pic_url).into(iv_back_ground);
+
         import_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -265,7 +268,6 @@ public class ScoreFragment extends Fragment implements View.OnClickListener {
      */
     private void findFromDb() {
 
-        Log.i(TAG, "findFromDb走了....");
         //默认加载最新的学期的课程表
         if (scores != null && scores.size() == 0) {
             loadLastScoreFromDb();

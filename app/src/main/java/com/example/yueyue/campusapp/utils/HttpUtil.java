@@ -25,6 +25,7 @@ import org.xutils.x;
 import java.io.IOException;
 import java.net.HttpCookie;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -360,7 +361,14 @@ public class HttpUtil {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                System.out.println("-----------------------------");
+
+
+                Date date = new Date();
+                int year = date.getYear();
+                int month = date.getMonth();
+
+
+
                 String allCourseHtmlStr = Stream2String.getUrlNet2Str(GlobalValue.COUSE_URL_ALL,
                         cookie);
                 if (!TextUtils.isEmpty(allCourseHtmlStr)) {

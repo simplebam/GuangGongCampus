@@ -16,12 +16,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.yueyue.campusapp.R;
 import com.example.yueyue.campusapp.adapter.NewsAdapter;
 import com.example.yueyue.campusapp.models.NewsBean;
+import com.example.yueyue.campusapp.utils.HttpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.example.yueyue.campusapp.R.id.iv_bing_pic;
 
 
 /**
@@ -122,7 +126,8 @@ public class NewsFragment extends Fragment implements View.OnClickListener {
         rl_list.setAdapter(mNewsAdapter);
 
 
-        mIvBingPic = (ImageView) view.findViewById(R.id.iv_bing_pic);
+        mIvBingPic = (ImageView) view.findViewById(iv_bing_pic);
+        Glide.with(getActivity()).load(HttpUtil.bing_pic_url).into(mIvBingPic);
 
         //在fragment中使用menu菜单必须添加下面这一行代码，需要在onCreate()方法里面添加语
         setHasOptionsMenu(true);

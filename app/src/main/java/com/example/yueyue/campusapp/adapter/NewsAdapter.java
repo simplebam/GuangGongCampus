@@ -20,7 +20,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private static final String TAG = NewsAdapter.class.getSimpleName();
     private List<NewsBean> mList;
-    private NewsAdapter.ViewHolder preHolder;
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tv_title;
