@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/fl_contact_root"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ffffff">
+
+    <!-- <ListView
+         android:id="@+id/phone_lv"
+         android:visibility="gone"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+     </ListView>-->
+    <include
+        android:id="@+id/item_contact_show"
+        layout="@layout/item_contact_show"
+        android:visibility="gone"/>
+
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/import_btn"
+            android:text="请导入电话信息"
+            style="@style/MyFragmentButtonStyle"/>
+
+        <TextView
+            android:gravity="left"
+            android:padding="16dp"
+            android:text="@string/contact_fail_tip"
+            android:textColor="#aaaaaa"
+            style="@style/MyFragmentTextViewStyle"/>
+    </LinearLayout>
+
+</FrameLayout>

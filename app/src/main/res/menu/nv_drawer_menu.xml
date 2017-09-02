@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!--图标使用的颜色:707070-->
+        <item
+            android:id="@+id/school_course"
+            android:icon="@drawable/nv_menu_course"
+            android:title="@string/school_course" />
+        <item
+            android:id="@+id/school_score"
+            android:icon="@drawable/nv_drawer_score_bg"
+            android:title="@string/school_score" />
+
+        <item
+            android:id="@+id/school_contact"
+            android:icon="@drawable/nv_drawer_call_bg"
+            android:title="@string/school_phone" />
+
+        <item
+            android:id="@+id/school_details"
+            android:icon="@drawable/nv_drawer_details_bg"
+            android:title="@string/person_details" />
+
+        <item
+            android:id="@+id/school_news"
+            android:icon="@drawable/nv_drawer_news_bg"
+            android:title="@string/school_news" />
+
+<!--        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_favorite"
+            android:title="@string/about" />-->
+    </group>
+</menu>

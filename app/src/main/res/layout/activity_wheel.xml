@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="80dp">
+
+    <TextView
+        android:id="@+id/rate_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/more_top_nor"
+        android:gravity="center"
+        android:text="周次"
+        android:drawableBottom="@drawable/cell_cut_line"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <com.example.yueyue.campusapp.widget.PickerView
+        android:id="@+id/pickerview"
+        android:layout_below="@id/rate_tv"
+        android:background="@drawable/more_content_nor"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <TextView
+        android:clickable="true"
+        android:id="@+id/tv_click"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:drawableTop="@drawable/cell_cut_line"
+        android:layout_below="@id/pickerview"
+        android:text="确定"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:background="@drawable/more_bottom_nor"/>
+
+</RelativeLayout>

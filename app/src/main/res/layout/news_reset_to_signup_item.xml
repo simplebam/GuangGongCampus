@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="重修申请流程"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="学期末（公选课结束）教务处公布重修报名通知，学生在规定时间内登录选课系统报名"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="在报名结束后上网查询报名结果（在报名结束后两天，将在教务处主页上公布报名结果）"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="每学期开学第一周周末，进行重修补报（同上在相应时间将公布报名结果）"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="根据中文成绩单内容，制作出英文成绩单"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="第二周根据报名数据向各学院下发重修任务（学生在第五周可登录网站查询各课程的具体重修时间及地点）"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

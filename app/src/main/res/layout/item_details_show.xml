@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8000"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="学生个人信息"
+        android:textColor="#fff"
+        android:textSize="30sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="学号"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_number"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="20158888144"/>
+
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="姓名"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_name"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="易建联"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="性别"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_sex"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="男"/>
+
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="入学"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_enter_year"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="2014"/>
+
+
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="院系"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_major"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="计算机学院"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="专业"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_specialty"
+                style="@style/StuInfoDetail"
+                android:textColor="#fff"
+                tools:text="计算机科学与技术"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="班级"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_grade"
+                style="@style/StuInfoDetail"
+                android:text="应用化学14(1)"
+                android:textColor="#fff"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="校区"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_address"
+                style="@style/StuInfoDetail"
+                android:digits="0123456789"
+                android:text="大学城校区"
+                android:textColor="#fff"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="1"
+                style="@style/StuInfoType"
+                android:text="辅修"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_weight="5"
+                android:id="@+id/tv_minor"
+                style="@style/StuInfoDetail"
+                android:digits="0123456789"
+                android:text="计算机科学与技术"
+                android:textColor="#fff"/>
+        </TableRow>
+
+        <View
+            style="@style/WireThinHorizontal"/>
+
+    </TableLayout>
+
+</LinearLayout>

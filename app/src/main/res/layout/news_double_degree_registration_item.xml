@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="双学位(辅修)申请流程"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="第三学期第4-6周查阅《广东工业大学双学位（双专业）和辅修报名通知》"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="符合申请条件的学生请登陆教务处教务管理系统报名（网上报名）"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="教务处汇总名单后，根据报名情况进行改报（第8-9周）"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="教务处录取"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="第12周公布录取名单（公布在学校和教务处主页）"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

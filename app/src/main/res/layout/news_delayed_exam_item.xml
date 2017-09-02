@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyNewsTextViewStyle"
+                            android:layout_marginTop="20dp"
+                            android:text="缓考申请流程"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="学生因特殊原因需申请缓考时，须在考前填写《广东工业大学学生缓考申请表》 http://jwc.gdut.edu.cn/xgxz/ksycjgl/xnkcks.htm"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="由学生交任课教师和学院主管领导签名批准"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="教务处审核后，由学院教务员录入教务管理系统"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="缓考时间安排在下一学期开学第一周前的周六、周日进行，缓考安排通知于缓考前一个星期挂在学校通知栏。"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

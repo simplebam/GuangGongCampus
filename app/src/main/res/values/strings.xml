@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">广工教务系统APP</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="school_news">代办事项</string>
+    <string name="school_course">班级课表</string>
+    <string name="school_score">积点查询</string>
+    <string name="person_details">个人信息</string>
+    <string name="school_phone">办公电话</string>
+    <string name="about">设置</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+
+    <string name="header">广工教务系统</string>
+    <string name="sure">确定</string>
+
+    <string name="contact_fail_tip">若多次导入失败，请检查你的网络连接</string>
+    <string name="course_empty_warm_tips">应用在第一次登陆的时候默认加载当前学期
+        的全部课程的,如果加载失败,可以尝试导入当前周的课程,如果还是出现这种情况,可能是课程还没有
+        安排好,请使用网页登陆教务系统进行查看</string>
+    <string name="score_empty_warm_tips">若导入多次失败,请登陆网页教务系统查看是否忘了老师们做评价了</string>
+
+</resources>

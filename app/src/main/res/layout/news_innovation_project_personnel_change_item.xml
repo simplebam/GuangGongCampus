@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="项目个人信息变更"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="项目负责人登录“广东工业大学本科教学质量与改革工程项目管理（http://222.200.98.208:8088/research/login.jsp），在系统“项目信息”一栏勾选项目并选择“项目信息变更申请”，在系统弹出的”修改项目”栏中填写并提交变更信息"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="填写纸质版《大学生创新创业训练项目成员变动申请表》,指导教师和所在学院加意见后交到教务处实践科(大学城校区行政楼304)"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="收到纸质版申请表后,教务处实践科在系统审批通过"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

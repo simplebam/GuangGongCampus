@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="毕业证补办流程"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="在教务处主页下载并填写《广东工业大学申请毕业证明书审批表》 http://jwc.gdut.edu.cn/info/1095/2196.htm"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="到东风路校区图书馆 8 楼学校档案馆复印相关材料\n1、申请人的新生录取名册\n2、2001 年以前毕业的需提供毕业发证记录"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="每个月15日（遇节假日顺延至下一工作日）到大学城教务处交相关的申请材料\n1、本人毕业当年新华社图片统一照相（大一寸）1 张或本人大一寸证件照 1 张，并将证 件照的电子版（尺寸：120×160）发到以下邮箱：jwc5@gdut.edu.cn\n2、广东工业大学申请毕业证明书审批表；\n3、申请人的新生录取名册；\n4、2001 年以前毕业的需提供毕业发证记录"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="交材料后下个月15日本人凭身份证原件到大学城校园行政楼三楼 310 室教务处学 务科交办证费、领证。"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="温馨提示"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="学校档案馆电话：020-37626080 学务科电话：020-39322661"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

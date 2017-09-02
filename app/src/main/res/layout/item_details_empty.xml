@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+    <Button
+        android:id="@+id/import_btn"
+        android:text="联网导入个人信息"
+        style="@style/MyFragmentButtonStyle"/>
+
+
+    <TextView
+        android:text="若多次导入信息失败,请使用浏览器登陆教务系统查看能否正确查看个人信息"
+        style="@style/MyFragmentTextViewStyle"/>
+</LinearLayout>

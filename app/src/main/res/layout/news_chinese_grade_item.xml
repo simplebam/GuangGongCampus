@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="在校生"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="学生本人携带学生证到学生所在学院打印中文成绩单。"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="将经学院审核盖章的成绩单送教务处教务科加盖“广东工业大学成绩管理专用章”。"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="往届毕业生"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="请携带毕业证明书及身份证原件前往东风路校区图书馆八楼学校综合档案室复印本人的成绩单。"/>
+
+            <TextView
+                style="@style/MyNewsTextViewStyle"
+                android:layout_marginTop="20dp"
+                android:text="温馨提示"/>
+
+
+            <TextView
+                style="@style/MyNewsTextViewStyle1"
+                android:layout_marginTop="20dp"
+                android:text="教务科电话：39322661（大学城校园），37626230（东风路校区），020-87082921（龙洞校区）"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

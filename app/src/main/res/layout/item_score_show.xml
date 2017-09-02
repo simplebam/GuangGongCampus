@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/item_score_show"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@android:color/transparent"
+              android:orientation="vertical"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#90F79B9B"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="目前的选择是:"
+            android:textColor="#403E3E"
+            android:textSize="18sp"/>
+
+        <!-- app:msDropItemText="全部选项"-->
+        <!--app:msDropTitleBackgroundColor="@color/colorPrimary"
+            app:msDropTitleText="常用选项"
+            app:msDropTitleTextColor="@android:color/white"
+            app:msDropTitleTextSize="12sp"-->
+        <!-- android:layout_width="100dp"-->
+        <com.clj.memoryspinner.MemorySpinner
+            android:id="@+id/ms_spinner"
+            style="@style/Base.Widget.AppCompat.Spinner.Underlined"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+
+            app:msDropItemBackgroundColor="@android:color/white"
+
+            app:msDropItemTextColor="@android:color/black"
+            app:msDropItemTextSize="14sp"
+
+            app:msItemTextColor="@android:color/black"
+            app:msItemTextSize="14sp"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="绩点:"
+            android:textColor="#403E3E"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_semester_point"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="3.47272982929"
+            android:textColor="#403E3E"
+            android:textSize="18sp"/>
+
+
+
+    </LinearLayout>
+
+    <!--    <view
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#9000"/>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rl_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

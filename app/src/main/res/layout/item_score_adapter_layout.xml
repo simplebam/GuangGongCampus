@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:background="#7000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:text="2016春季"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:id="@+id/tv_semester_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tv_course_name"
+            android:layout_alignParentLeft="true"
+            android:textColor="#000"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="21世纪高新技术"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_actual_score"
+            android:layout_alignParentRight="true"
+            android:textColor="#656363"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:text="优秀"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/tv_course_name"
+            android:textColor="#2170C1"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="14sp"
+            android:text="公共选修课"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_actual_score"
+            android:id="@+id/tv_point"
+            android:textColor="#2170C1"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="14sp"
+            android:text="1.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_line"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#000"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

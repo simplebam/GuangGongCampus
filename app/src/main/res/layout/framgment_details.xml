@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:background="@drawable/bing_pic_default"
+        android:scaleType="centerCrop"
+        android:id="@+id/iv_bing_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:background="@android:color/transparent"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:background="@android:color/transparent"
+            android:id="@+id/sc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <!--有数据的时候显示的界面-->
+                    <include
+                        android:id="@+id/ll_show"
+                        layout="@layout/item_details_show"
+                        android:visibility="gone"/>
+                    <!--空的时候显示的界面-->
+                    <include
+                        android:id="@+id/ll_empty"
+                        layout="@layout/item_details_empty"
+                        android:visibility="visible"/>
+                </FrameLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.design.widget.CoordinatorLayout>

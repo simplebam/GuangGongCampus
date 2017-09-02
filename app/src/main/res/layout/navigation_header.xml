@@ -1,0 +1,37 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="@color/mainColor"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/nv_header_image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/nv_header_default_bg"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/nv_header_username"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哆啦A梦"/>
+    <TextView
+        android:textColor="#fff"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/nv_header_grade"
+        android:layout_marginTop="3dp"
+        android:textSize="16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="应用化学14(1)"/>
+
+</LinearLayout>

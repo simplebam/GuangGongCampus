@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sectionHeight">50dp</dimen>
+    <dimen name="course_tab_tv_size">3dp</dimen>
+    <dimen name="padding_2_dip">2dp</dimen>
+    <dimen name="padding_3_dip">3dp</dimen>
+</resources>
