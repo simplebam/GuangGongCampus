@@ -24,6 +24,10 @@ public class ContactAdapter extends BaseAdapter implements SectionIndexer {
 
     private List<ContactInfo> datas;
 
+    public void setDatas(List<ContactInfo> datas) {
+        this.datas = datas;
+    }
+
     public ContactAdapter(List<ContactInfo> datas) {
         this.datas = datas;
         if (datas == null) {

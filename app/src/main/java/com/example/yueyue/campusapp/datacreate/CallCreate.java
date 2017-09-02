@@ -21,6 +21,11 @@ public class CallCreate {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+
+                    if (callBack != null) {
+                        callBack.onStart();
+                    }
+
                     ContactInfo info1 = new ContactInfo("党委办公室", "39322180", "大学城", "机关");
                     info1.setPinyin(HanziToPinyin.getPinYin(info1.name));
                     info1.save();

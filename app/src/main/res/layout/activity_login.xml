@@ -63,7 +63,7 @@
             android:id="@+id/et_login_pwd"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="初始密码为身份证后6位"
+            android:hint="请输入你的教务系统密码"
             android:inputType="textPassword"
             android:maxLength="30"
             android:maxLines="1"/>

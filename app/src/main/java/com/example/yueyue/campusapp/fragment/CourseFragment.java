@@ -49,7 +49,9 @@ import cn.refactor.lib.colordialog.ColorDialog;
 
 import static android.app.Activity.RESULT_OK;
 
-
+/**
+ * 课程查询
+ */
 public class CourseFragment extends Fragment implements View.OnClickListener {
 
     private static final String TAG = CourseFragment.class.getSimpleName();

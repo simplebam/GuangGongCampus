@@ -98,7 +98,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 HttpUtil.getLoginCode(new OkHttpCallback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-                        Toast.makeText(getApplicationContext(), "获取验证码失败", Toast.LENGTH_SHORT);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(getApplicationContext(), "获取验证码失败", Toast.LENGTH_SHORT);
+                            }
+                        });
                     }
 
                     @Override

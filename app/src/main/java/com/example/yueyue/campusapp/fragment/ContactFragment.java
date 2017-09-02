@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,12 +26,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.yueyue.campusapp.models.ContactInfo;
 import com.example.yueyue.campusapp.MyApplication;
 import com.example.yueyue.campusapp.R;
 import com.example.yueyue.campusapp.adapter.ContactAdapter;
 import com.example.yueyue.campusapp.datacreate.CallCreate;
 import com.example.yueyue.campusapp.implement.CallBack;
+import com.example.yueyue.campusapp.models.ContactInfo;
 import com.example.yueyue.campusapp.utils.GlobalValue;
 import com.example.yueyue.campusapp.utils.NetStatusUtil;
 import com.example.yueyue.campusapp.widget.ProgressDialogHelper;
@@ -151,7 +150,7 @@ public class ContactFragment extends android.support.v4.app.Fragment
         import_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                findFromHttp();
+                saveToDB();
             }
         });
         //设置监听,弹出对话框
@@ -159,7 +158,7 @@ public class ContactFragment extends android.support.v4.app.Fragment
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //把那个电话详细过对话框显示出来
-                Log.i(TAG, "setOnItemClickListener中的位置POS:" + position);
+//                Log.i(TAG, "setOnItemClickListener中的位置POS:" + position);
                 if (view instanceof TextView) {
                     //如果是脚布局那个,不可以点击
                 } else {
@@ -198,8 +197,8 @@ public class ContactFragment extends android.support.v4.app.Fragment
                                 //究竟需要不需要排序,这是一个问题
                                 //Collections.sort(contactInfoList);
 
-                                Log.i(TAG, "onScrollStateChanged中的contactInfoList大小" + contactInfoList.size()
-                                        + "dataTotalNum:" + dataTotalNum);
+//                                Log.i(TAG, "onScrollStateChanged中的contactInfoList大小" + contactInfoList.size()
+//                                        + "dataTotalNum:" + dataTotalNum);
 
                                 contactAdapter.notifyDataSetChanged();
                             }
@@ -260,16 +259,17 @@ public class ContactFragment extends android.support.v4.app.Fragment
      * 从数据库中查询数据
      */
     private void findFromDb() {
-        if (contactInfoList.size() == 0) {
+        if (contactInfoList.size() <= 0) {
             //如果电话集合没有数据,先去数据库查询一下
-            Log.i("TAG", "进入findFromDb()中,查询之前数据长度是:" + contactInfoList.size());
             //看看数据库的数据量
             dataTotalNum = DataSupport.count(ContactInfo.class);
             contactInfoList = limit(pageSize).offset(dataPageNum).find(ContactInfo.class);
-            Log.i("TAG", "进入findFromDb()中,查询之后数据长度是:" + contactInfoList.size());
             if (contactInfoList.size() > 0) {
                 //显示数据-->隐藏不要的组件
                 initView();
+            } else {
+                //创建电话本数据库
+                CallCreate.callDataCreate(true,null);
             }
         } else {
             //显示数据-->隐藏不要的组件
@@ -288,7 +288,6 @@ public class ContactFragment extends android.support.v4.app.Fragment
 
         mFooterView.setText("目前有" + contactInfoList.size() + "位联系人    "
                 + "数据库共有" + dataTotalNum + " 人");
-        //       mFooterView.setText(contactInfoList.size() + "位联系人");
         //显示数据
         if (contactAdapter != null) {
             contactAdapter.notifyDataSetChanged();
@@ -303,8 +302,6 @@ public class ContactFragment extends android.support.v4.app.Fragment
      * 显示数据-->隐藏不必要的组件
      */
     private void initView() {
-        Log.i("TAG", "initview");
-        Log.i("TAG", "进入initView()中,数据长度是:" + contactInfoList.size());
         if (contactInfoList.size() > 0) {
             //大于0才变为显示数据界面showLayout
             emptyLayout.setVisibility(View.GONE);
@@ -314,7 +311,6 @@ public class ContactFragment extends android.support.v4.app.Fragment
                 isFirstEnterHere = false;
             }
             //设置一个数据适配器
-            //    contactAdapter = new PhoneAdapter(phoneListView, contactInfoList);
             phoneListView.setAdapter(contactAdapter);
 
             if (contactAdapter != null) {
@@ -480,37 +476,44 @@ public class ContactFragment extends android.support.v4.app.Fragment
 
 
     /**
-     * 目前是虚拟从网上获得数据-->创建模拟数据
+     * 从数据库中查询数据
      */
-    private void findFromHttp() {
+    private void saveToDB() {
+        if (contactInfoList.size()>=0) {
+            initView();
+        } else {
+            //创建电话本数据库
+            CallCreate.callDataCreate(false, new CallBack() {
+                @Override
+                public void onStart() {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            initView();
+                            ProgressDialogHelper.showProgressDialog(getActivity(), "正在载入...");
+                            //contactInfoList = findAll(ContactInfo.class);
+                            contactInfoList = limit(pageSize).offset(dataPageNum)
+                                    .find(ContactInfo.class);
 
-        CallCreate.callDataCreate(false, new CallBack() {
-            @Override
-            public void onStart() {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        initView();
-                        ProgressDialogHelper.showProgressDialog(getActivity(), "正在载入...");
-                        //contactInfoList = findAll(ContactInfo.class);
-                        contactInfoList = limit(pageSize).offset(dataPageNum)
-                                .find(ContactInfo.class);
-                    }
-                });
-            }
 
-            @Override
-            public void onFinsh(String response) {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        initView();
-                        ProgressDialogHelper.closeProgressDialog();
+                        }
+                    });
+                }
 
-                    }
-                });
-            }
-        });
+                @Override
+                public void onFinsh(String response) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            initView();
+                            ProgressDialogHelper.closeProgressDialog();
+
+                        }
+                    });
+                }
+            });
+        }
+
 
     }
 
