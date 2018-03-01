@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GuangGongCampus.iml" filepath="$PROJECT_DIR$/GuangGongCampus.iml" />
+      <module fileurl="file://E:\acode\Android_Studio\GuangGongCampus\GuangGongCampus.iml" filepath="E:\acode\Android_Studio\GuangGongCampus\GuangGongCampus.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\acode\Android_Studio\GuangGongCampus\app\app.iml" filepath="E:\acode\Android_Studio\GuangGongCampus\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/getbingyingphoto/getbingyingphoto.iml" filepath="$PROJECT_DIR$/getbingyingphoto/getbingyingphoto.iml" />
+      <module fileurl="file://E:\acode\Android_Studio\GuangGongCampus\getbingyingphoto\getbingyingphoto.iml" filepath="E:\acode\Android_Studio\GuangGongCampus\getbingyingphoto\getbingyingphoto.iml" />
     </modules>
   </component>
 </project>

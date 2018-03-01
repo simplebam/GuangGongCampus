@@ -49,7 +49,7 @@ public class GlobalValue {
      */
     //"http://119.29.214.111:8080/Login/LoginServlet"
     // http://119.29.214.111:8080/Login/LoginServlet?username=abc&password=123
-    public static final String LOGIN_BASE_URL = CAMPUS_BASE_URL + "/login!doLogin.action";
+    public static final String LOGIN_BASE_URL = CAMPUS_BASE_URL + "/new/login";
 
 
 //    final String CouseUrl = "http://222.200.98.147/xsgrkbcx!getKbRq.action?" +

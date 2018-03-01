@@ -141,7 +141,7 @@ public class HttpUtil {
 
             @Override
             public void onFinished() {
-                loginCallback.onError(new RuntimeException("getLoginCookie运行异常"));
+
             }
         });
     }
@@ -211,8 +211,9 @@ public class HttpUtil {
                         //   Log.d(TAG, "onResponse: " + response.body().string());
                         //这里不可以写response.body().string();否则会引起内存泄漏
                         //因为它几乎会同时两次进行联网,报出致命的调度错误
-                        String result = new String(response.body().string());
-                        System.out.println("result:" + result);
+                        String result = response.body().string();
+//                        System.out.println("result:" + result);
+                        Log.i(TAG, "onSuccess: "+result);
                         handleLoginResult(result, loginCallback);//处理结果
                     }
                 });
@@ -222,21 +223,22 @@ public class HttpUtil {
     }
 
     /**
-     * 处理登陆返回的结果{"status":"y","msg":"/login!welcome.action"}
+     * 处理登陆返回的结果{"code":0,"data":"/login!welcome.action","message":"登录成功"}
+     *                 {"code":-1,"data":null,"message":"您的帐号或密码不正确"}
      *
-     * @param result        登陆结果--> 成功"status":"y","msg":"/login!welcome.action"
-     *                      失败"status":"n","msg":"您的帐号或密码不正确"
-     *                           {"status":"n","msg":"连接已过期"}  --验证码没有更新
+     * @param result        登陆结果--> 成功{"code":0,"data":"/login!welcome.action","message":"登录成功"}
+     *                      失败{"code":-1,"data":null,"message":"您的帐号或密码不正确"}
+     *
      * @param loginCallback 回掉函数
      */
     private static void handleLoginResult(String result, final LoginCallback loginCallback) {
         JSONObject jsonObject = null;
         try {
             jsonObject = new JSONObject(result);
-            String status = jsonObject.getString("status");
-            String msg = jsonObject.getString("msg");
+            String code = jsonObject.getString("code");
+            String msg = jsonObject.getString("message");
 //            Log.i(TAG, "msg:" + msg + "--------status:" + status);
-            if ("y".equals(status)) {
+            if ("0".equals(code)) {
                 //说明登陆成功
 //                SpUtils.putString(MyApplication.getAppContext(),
 //                        "cookie", cookie);
