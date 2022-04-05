@@ -34,7 +34,8 @@ PS:这里加入了一个EditText空的时候会抖动的效果
 这里的作用就是一个容器(主要存在Fragment)+一个导航栏
 
 #### **课程界面**
-*  zyks使用的是ListView展示,我选择的是仿超级课程表的方式做的,地址:[https://github.com/WHuaJian/CourseTable](https://github.com/WHuaJian/CourseTable)
+*  zyks使用的是ListView展示,我选择的是仿超级课程表的方式做的,地址:[https://github.com/WHuaJian/CourseTable](https://github.com/WHuaJian/CourseTable)  <br/>
+
    ![这里写图片描述](http://img.blog.csdn.net/20170611113336863?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2ltcGxlYmFt/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
    
    ![这里写图片描述](http://img.blog.csdn.net/20170611113203720?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2ltcGxlYmFt/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
